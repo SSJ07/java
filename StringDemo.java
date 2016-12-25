@@ -1,7 +1,6 @@
 public class StringDemo{
 	public static void main(String args[]){
 			String string = "Hello Shri";
-		
 			System.out.println("Length of String is : "+ string.length());
 			System.out.println("To Upper Case String: "+ string.toUpperCase());
 			System.out.println("substring()of String: "+ string.substring(0,4));
@@ -12,5 +11,6 @@ public class StringDemo{
 			System.out.println("lastIndexOf(char ch): "+ string.lastIndexOf('r'));
 			System.out.println("toCharArray()       : "+ string.toCharArray());
 			System.out.println("trim() method String: "+ string.trim());
+			System.out.println("lowercase() string  : "+ string.toLowerCase());
 	}
 }
