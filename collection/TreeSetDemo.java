@@ -1,5 +1,6 @@
 package org.shri.collection;
 
+import java.util.Comparator;
 import java.util.TreeSet;
 
 public class TreeSetDemo {
@@ -36,9 +37,11 @@ public class TreeSetDemo {
 			
 			
 			TreeSet t = new TreeSet();
-//			t.add(new StringBuffer("A"));
-//			t.add(new StringBuffer("B"));
-//			t.add(new StringBuffer("C"));
+			
+			/*t.add(new StringBuffer("A")); 
+			t.add(new StringBuffer("B"));
+			t.add(new StringBuffer("C"));*/
+			
 			// will throw :  java.lang.ClassCastException: 
 			// java.lang.StringBuffer cannot be cast to java.lang.Comparable
 			//System.out.println(t); 
@@ -48,10 +51,36 @@ public class TreeSetDemo {
 			// returns -1 if obj1 has come before obj2
 			// returns 1 if obj1 has come after obj2
 			// returns 0 if obj1 & obj2 are equals
-			System.out.println("A".compareTo("B")); 
-			System.out.println("B".compareTo("A"));
-			System.out.println("A".compareTo("A"));
+			System.out.println("A".compareTo("B")); // -1
+			System.out.println("B".compareTo("A")); // 1
+			System.out.println("A".compareTo("A")); // 0
 			
+			// Whiling adding element compareTo method invokes.
+			// obj1.compareTo(obj2) in this obj1 is inserting element and obj2 is existing element in treeset
+			
+			
+			TreeSet ct = new TreeSet(new MyComparator());
+			ct.add(10);
+			ct.add(20); 
+			ct.add(0);
+			ct.add(15);
+			ct.add(4);
+			System.out.println(ct);
 	}
 
 }
+class MyComparator implements Comparator<Integer>{
+
+	public int compare(Integer o1, Integer o2) {
+		//return o1.compareTo(o2); //return ascending order
+		//return -o1.compareTo(o2); // return descending order
+		//return o2.compareTo(o1); //return descending order
+		//return -o2.compareTo(o1); //return ascending order
+		//return +1; // return insertion order set
+		//return -1; //reverse of insertion order
+		return 0; //only first element  will be inserted and rest all element considered as duplicate
+		
+	}
+	
+}
+
