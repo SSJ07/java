@@ -18,7 +18,9 @@ public class VectorExample {
 		vector.add(100);
 		System.out.println(vector);
 		System.out.println("size of vector is :" + vector.size());
-		
+		System.out.println("is Empty : " + vector.isEmpty());
+		System.out.println("contains :" + vector.contains("spring"));
+		System.out.println("lastElement:" + vector.lastElement());
 		
 	}
 
