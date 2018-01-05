@@ -40,7 +40,12 @@ public class OverloadingExample {
 	public void show(float f, int i){
 		System.out.println("i="+ i + " f="+f);
 	}
-	
+	public void show(Animal animal){
+		System.out.println("show animal" + animal);
+	}
+	public void show(Tiger tiger){
+		System.out.println("show tiger " +tiger);
+	}
 	public static void main(String[] args) {
 		
 		OverloadingExample oexample = new OverloadingExample();
@@ -55,7 +60,32 @@ public class OverloadingExample {
 		oexample.show(10, 20.0f);
 		oexample.show(20.0f, 30);
 		
+		Tiger tiger = new Tiger();
+		oexample.show(tiger);
+		
+		Animal animal = new Animal();
+		oexample.show(animal);
+		
+		Animal animal1 = new Tiger();
+		oexample.show(animal1);
 
 	}
 
+}
+class Animal{
+
+	@Override
+	public String toString() {
+		return "Animal [toString()=" + super.toString() + "]";
+	}
+	
+}
+class Tiger extends Animal{
+
+	@Override
+	public String toString() {
+		return "Tiger []";
+	}
+
+	
 }
