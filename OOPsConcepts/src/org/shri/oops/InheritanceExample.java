@@ -15,6 +15,11 @@ package org.shri.oops;
  * 			4. Parent reference can be used to hold child reference. But using that
  * 				reference we can't call methods of child class but can call parent methods.
  * 			5. Child reference can't hold parent class reference.
+ * 			6. Java doesn't support multiple inheritance.
+ * 				Why?:
+ * 				  ParentA -> method1             
+ * 				  ParentB -> method1
+ * 				  Child extends ParentA,ParentB # it will create ambiguity 
  */
 
 class Parent{
