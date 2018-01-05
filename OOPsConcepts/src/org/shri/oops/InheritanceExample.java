@@ -8,6 +8,11 @@ package org.shri.oops;
  * Achieves using keywords extends
  * 
  *
+ * Conclusions:
+ * 			1. Whatever parent methods has by default available to child class.
+ * 			2. Child class can access both parent + child class methods.
+ * 			3. Parent class has only access of it's own methods not child class methods.
+ * 			4.  
  */
 
 class Parent{
@@ -55,9 +60,9 @@ public class InheritanceExample {
 		
 		/**
 		 * Child class reference can't hold parent reference
-		 * Will give compile time error can't convert parent to child
+		 * Will give compile time error TypeMismatch: can't convert parent to child
 		 */
-		//Class cp = new Parent(); 
+//		Class cp = new Parent(); 
 	}	
 
 }
