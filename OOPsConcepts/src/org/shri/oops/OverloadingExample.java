@@ -17,6 +17,9 @@ public class OverloadingExample {
 	public void show(int i){
 		System.out.println("show value :" + i);
 	}
+	public void show(int... x){
+		System.out.println("show value="+ x);
+	}
 	public void show(float f){
 		System.out.println("show value:" + f);
 	}
@@ -43,7 +46,7 @@ public class OverloadingExample {
 		OverloadingExample oexample = new OverloadingExample();
 		oexample.show();
 		oexample.show(10.30f);
-		oexample.show(10);
+		oexample.show(10); // show old version not var-args method
 		oexample.show("Overloading");
 		oexample.show('a'); // promotes this char type to int
 		oexample.show(100001l); // It promotes long to float value
