@@ -12,7 +12,9 @@ package org.shri.oops;
  * 			1. Whatever parent methods has by default available to child class.
  * 			2. Child class can access both parent + child class methods.
  * 			3. Parent class has only access of it's own methods not child class methods.
- * 			4.  
+ * 			4. Parent reference can be used to hold child reference. But using that
+ * 				reference we can't call methods of child class but can call parent methods.
+ * 			5. Child reference can't hold parent class reference.
  */
 
 class Parent{
