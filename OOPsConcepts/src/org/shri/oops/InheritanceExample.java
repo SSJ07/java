@@ -3,7 +3,9 @@ package org.shri.oops;
 /**
  * 
  * @author Shri
+ * 
  * Inheritance is one of the main feature of java
+ * It's called IS-A relationship
  * Inheritance means inheriting some properties from parant and reuse it.
  * Achieves using keywords extends
  * 
@@ -15,11 +17,13 @@ package org.shri.oops;
  * 			4. Parent reference can be used to hold child reference. But using that
  * 				reference we can't call methods of child class but can call parent methods.
  * 			5. Child reference can't hold parent class reference.
- * 			6. Java doesn't support multiple inheritance.
+ * 			6. Java doesn't support multiple inheritance for class but support interface.
  * 				Why?:
  * 				  ParentA -> method1             
  * 				  ParentB -> method1
- * 				  Child extends ParentA,ParentB # it will create ambiguity 
+ * 				  Child extends ParentA,ParentB # it will create ambiguity
+ * 			7. Cyclic inheritance is not support in java
+ *  
  */
 
 class Parent{
