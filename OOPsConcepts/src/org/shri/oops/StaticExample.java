@@ -4,6 +4,7 @@ package org.shri.oops;
  * 
  * @author Shri
  * 
+ * Static block executed at the time of class loading.
  * Static block execution flow :
  *  	
  *  	1. Identification of static variable member from top to bottom
@@ -15,7 +16,8 @@ public class StaticExample {
 
 	static int i = 10; // execution first
 	static{  // execute seconds
-		method1(); 
+		method1(); // in method1 accessed j static variable. it is called indirect read static variable
+		System.out.println(i); // it is called direct read
 		System.out.println("static block 1"); 
 	}
 	
