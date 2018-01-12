@@ -11,25 +11,46 @@ package org.shri.oops;
  */
 public class InstanceFlowInheritance extends InstanceFlow{
 
+	/**
+	 * Instance variable
+	 */
 	int x=20;
+	/**
+	 * child instance block 1
+	 */
 	{
 		method2();
 		System.out.println("child instance block");
 	}
+	/**
+	 * constructor
+	 */
 	InstanceFlowInheritance(){
 		System.out.println("Child class constructor");
 	}
-	
+	/**
+	 * main method
+	 * 
+	 */
 	public static void main(String[] args) {
 		InstanceFlowInheritance ifInheritance = new InstanceFlowInheritance();
 		System.out.println("child class main method");
 	}
+	/**
+	 * instance method
+	 */
 	public void method2(){
 		System.out.println("child class method2. y:"+y);
 	}
+	/**
+	 * instance block 2
+	 */
 	{
 		System.out.println("child class instance block 2");
 	}
+	/**
+	 * instance variable
+	 */
 	int y=200;
 
 }
