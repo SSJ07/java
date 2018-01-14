@@ -1,3 +1,5 @@
+package LanguageFundamentals;
+
 public class DataTypeDemo{
 
 	byte bt;short sh;int it;

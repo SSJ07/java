@@ -1,3 +1,5 @@
+package LanguageFundamentals;
+
 public class ModifiersDemo{
 	final static int x=10;
 	public static void main(String args[]){

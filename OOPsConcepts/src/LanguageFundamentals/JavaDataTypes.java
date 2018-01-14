@@ -15,7 +15,7 @@ package LanguageFundamentals;
  * 						a) float - 4 byte
  * 						b) double - 8 byte
  * 		2. Non-Numeric Data type:
- * 				1. char
+ * 				1. char - 2 byte(16 bit)
  * 				2. boolean
  *
  */

@@ -1,3 +1,5 @@
+package LanguageFundamentals;
+
 /* Operator is Very import in any language. Java Provide following Operators :
 	1 : Arithmetic Op [ /, *, +, - ,%]
 	2 : Comparitive Op[==, !=, >,<, >=, <=]

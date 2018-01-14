@@ -1,4 +1,4 @@
-package org.shri.oops;
+package oops;
 
 import java.io.IOException;
 

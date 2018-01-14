@@ -1,4 +1,4 @@
-package org.shri.oops;
+package oops;
 /**
  * 
  * @author Shri

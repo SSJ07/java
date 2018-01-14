@@ -1,3 +1,5 @@
+package LanguageFundamentals;
+
 public class VariableDemo{
 	int x; // these is class variable
 	static int z; // these is static variable

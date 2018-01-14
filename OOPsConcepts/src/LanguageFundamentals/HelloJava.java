@@ -1,5 +1,6 @@
 /* This is my first java program on git */
 
+package LanguageFundamentals;
 
 public class HelloJava{
 	public static void main(String args[]){
