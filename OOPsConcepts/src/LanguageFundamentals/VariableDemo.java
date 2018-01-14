@@ -14,18 +14,18 @@ public class VariableDemo{
 
 		/* There are three types of variable.
 		 1 : local variable 
-		 2 : class variable
+		 2 : class variable/instance variable
 		 3 : static variable
 		*/
 		
-		/* local variable must be initialize before use. because it doesn't have defualt value.
+		/* local variable must be initialize before use. because it doesn't have default value.
 		   otherwise it will give compile time error.
 		   scope : end of method 
 		   modifiers : local variable only final modifier allows.
 		 */
 		
 		/* Class Variable created for each object of class and initialize with default value.
-		   when object is destoried variable also destory.
+		   when object is destroyed variable also destroy.
 		   scope : within class
 		   life  : still object is exist
 		   modifiers : private ,protected , final, static, transient, volatile, default
