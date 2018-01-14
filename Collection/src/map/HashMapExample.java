@@ -1,4 +1,4 @@
-package org.shri.map;
+package map;
 
 import java.util.HashMap;
 import java.util.Map.Entry;

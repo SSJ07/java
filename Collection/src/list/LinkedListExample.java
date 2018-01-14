@@ -1,4 +1,4 @@
-package org.shri.list;
+package list;
 
 import java.util.LinkedList;
 

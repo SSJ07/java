@@ -1,4 +1,4 @@
-package org.shri.collection;
+package set;
 
 import java.util.Comparator;
 import java.util.TreeSet;

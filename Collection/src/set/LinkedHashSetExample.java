@@ -1,4 +1,4 @@
-package org.shri.set;
+package set;
 
 import java.util.LinkedHashSet;
 

@@ -1,22 +1,22 @@
-package org.shri.utility;
+package utility;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
+
 
 /**
  * @author Shri
  *  
- * Employee class
+ * Employee class must implement Comparable Interface
  *
  */
-class Employee1{
+class Employee implements Comparable<Employee>{
 
 	private int empId;
 	private String empName;
 	private String empCompany;
 	
-	public Employee1(int empId, String empName, String empCompany) {
+	public Employee(int empId, String empName, String empCompany) {
 		super();
 		this.empId = empId;
 		this.empName = empName;
@@ -52,37 +52,28 @@ class Employee1{
 	public String toString() {
 		return "Employee [empId=" + empId + ", empName=" + empName + ", empCompany=" + empCompany + "]";
 	}
-}	
-
-/**
- * 
- * @author Shri
- * Define your own class to compare Employee1 class objects by implementing Comparator Interface
- */
-
-class EmpIdComparator implements Comparator<Employee1>{
 
 	@Override
-	public int compare(Employee1 emp, Employee1 emp1) {
+	public int compareTo(Employee o) {
 		/** Here is logic to compare employee objects **/
-		if(emp.getEmpId() == emp1.getEmpId())
+		if(this.empId == o.empId)
 			return 0;
-		return emp.getEmpId() < emp1.getEmpId()?-1:1;
+		return this.empId < o.empId?-1:1;
 	}
 	
 }
 
 
-public class ComparatorExample {
+public class ComparableExample {
 
 	public static void main(String[] args) {
-
-		ArrayList<Employee1> empList = new ArrayList<Employee1>();
-		Employee1 emp = new Employee1(1001, "Ganesh", "ABC Ltd");
-		Employee1 emp1 = new Employee1(1002, "Vinay", "PQR Ltd");
-		Employee1 emp2 = new Employee1(1003, "Ajay", "XYZ Ltd");
-		Employee1 emp3 = new Employee1(1004, "Shri", "LMN Ltd");
-		Employee1 emp4 = new Employee1(1005, "Ram", "ABC Ltd");
+		
+		ArrayList<Employee> empList = new ArrayList<Employee>();
+		Employee emp = new Employee(1001, "Ganesh", "ABC Ltd");
+		Employee emp1 = new Employee(1002, "Vinay", "PQR Ltd");
+		Employee emp2 = new Employee(1003, "Ajay", "XYZ Ltd");
+		Employee emp3 = new Employee(1004, "Shri", "LMN Ltd");
+		Employee emp4 = new Employee(1005, "Ram", "ABC Ltd");
 
 		empList.add(emp3);
 		empList.add(emp4);
@@ -92,18 +83,17 @@ public class ComparatorExample {
 		
 		/** Before sorting employee list **/
 		System.out.println("** Before sorting employee list **");
-		for(Employee1 empObj : empList){
+		for(Employee empObj : empList){
 				System.out.println(empObj);
 		}
 		
-		Collections.sort(empList, new EmpIdComparator());
-		
+		Collections.sort(empList);
 		/** After sorting employee list **/
 		System.out.println("** After sorting employee list **");
-		for(Employee1 empObj : empList){
+		for(Employee empObj : empList){
 				System.out.println(empObj);
 		}
-
 	}
 
 }
+
