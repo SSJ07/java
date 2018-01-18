@@ -39,15 +39,24 @@ public class SynchronizationDemo {
 
 	public static void main(String[] args) {
 		WishMessage message = new WishMessage();
+//		WishMessage message1 = new WishMessage();
 		MessageThread mt = new MessageThread(message, "sachin");
 		MessageThread mt1 = new MessageThread(message, "sehwag");
-		MessageThread mt2 = new MessageThread(message, "dhoni");
-		MessageThread mt3 = new MessageThread(message, "yuvraj");
+//		MessageThread mt2 = new MessageThread(message1, "dhoni");
+//		MessageThread mt3 = new MessageThread(message1, "yuvraj");
 		
 		mt.start();
 		mt1.start();
-		mt2.start();
-		mt3.start();
+//		mt2.start();
+//		mt3.start();
+		
+		/**
+		 * If we uncomment above code. then will get irregular output.
+		 * Because synchronized is used when multiple thread operating on single java
+		 * object.
+		 * But multiple thread operating on multiple java object then 
+		 * synchronization is not required.
+		 */
 	}
 
 }
