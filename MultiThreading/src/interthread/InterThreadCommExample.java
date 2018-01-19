@@ -20,6 +20,9 @@ package interthread;
 class InterThread extends Thread{
 	int total;
 	public void run(){
+		/**
+		 * notify() always call from synchronized area
+		 */
 		synchronized(this){
 			for(byte i=0; i<=100; i++){
 				total+=i;
@@ -36,11 +39,16 @@ public class InterThreadCommExample {
 		InterThread it = new InterThread();
 		it.start();
 		
+		/**
+		 * wait always call from synchronized area
+		 */
 		synchronized(it){
 			System.out.println("Main thread is trying to enter wait state:");
 			it.wait();
+			System.out.println("Main thread got notification ");
+			System.out.println("Total="+ it.total);
 		}
-		System.out.println("Total="+ it.total);
+		
 	}
 
 }
