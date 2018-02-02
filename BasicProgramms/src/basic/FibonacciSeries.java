@@ -12,8 +12,8 @@ import java.util.Scanner;
 public class FibonacciSeries {
 
 	public static void printFibonacciSeries(int number){
-		int a=1;
-		int b=0;
+		int a=-1;
+		int b=1;
 		for(int i=1; i<=number; i++){
 			b=(a+b);
 			System.out.print(b+ " ");
