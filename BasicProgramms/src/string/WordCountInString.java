@@ -14,6 +14,7 @@ public class WordCountInString {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Enter string : ");
 		String string = scan.nextLine();
+		string = string.trim();
 		System.out.println("Total words in strings are : "+ string.split(" ").length);
 		scan.close();
 	}
