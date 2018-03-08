@@ -8,7 +8,7 @@ public class IdentityHashMapExample {
 	public static void main(String[] args) {
 
 		/**
-		 * IdentityHashMap is same is HashMap.
+		 * IdentityHashMap is same as HashMap.
 		 * The difference is IdentityHashMap uses == (reference) operator to check duplicate key
 		 * And HashMap uses .equals(content comparison)  method
 		 */
