@@ -2,24 +2,40 @@ package generics;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 
 public class GenericExample {
 
 	public static void main(String[] args) {
 
+		/**
+		 * Generic has important advantages like :
+		 * 	1. Code reuse
+		 * 	2. Type safety
+		 * 	3. Type casting not required
+		 */
 		// This is non-generic code
 		List list = new ArrayList();
 		list.add(10);
 		list.add("java");
 		
-		List<List<Integer>> ls = new ArrayList<List<Integer>>();
+		/**
+		 * Here we have created List of integer
+		 * So this list can accept only integer values even you try to insert char, byte, short values 
+		 * Here it will not do auto boxing
+		 */
+		byte a = 10;
+		List<Integer> ls = new ArrayList<Integer>();
+		ls.add(10);
+		ls.add(20);
+//		ls.add('A'); //compile time error
+//		ls.add(a);  
 		
-		Set s = new TreeSet();
-		s.add(10);
-		s.add("hello");
-		System.out.println(s);
+		/**
+		 * While retrieving values no need to type casting
+		 */
+		for(int val: ls){
+			System.out.println(val);
+		}
 	}
 
 }
