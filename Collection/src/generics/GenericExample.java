@@ -13,7 +13,12 @@ public class GenericExample {
 		 * 	2. Type safety
 		 * 	3. Type casting not required
 		 */
-		// This is non-generic code
+		/**
+		 * This is non-generic code
+		 * It will accept all type of data.
+		 * But while fetching you don't know type of that object.
+		 * It will create a problem.
+		 */
 		List list = new ArrayList();
 		list.add(10);
 		list.add("java");
